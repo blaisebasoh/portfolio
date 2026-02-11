@@ -1,78 +1,96 @@
 :root {
-  main_color: #d2e0e2;
+  --main-color: #d2e0e2;
+  --bg-card: #f1f1f1;
 }
 
 * {
   margin: 0;
-  background-color: var(main_color);
+  padding: 0;
+  box-sizing: border-box;
   font-family: monospace;
   font-size: 20px;
+}
+
+/* Header Adjustments */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  text-align: center;
 }
 
 .content h2 {
   color: gray;
   font-size: 80px;
 }
-.content p {
-  user-select: none;
-}
 
-.content .head .contact,
-.contact p {
-  display: flex;
-  flex-direction: row;
-  padding: 0 10px;
-}
-
-/* .content a {
-  text-decoration: underline;
-} */
-
-.content {
+.contact {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 50vh;
+  gap: 20px;
+  margin: 10px 0;
 }
 
-.content .links ol {
+/* Email Button Styling */
+#copyEmail {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.links ul {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
-  list-style-type: none;
+  list-style: none;
+  padding: 0;
 }
 
-/* TODO: Make grid mobile responsive. */
+/* Optimized Grid */
 .project_showcase {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
-  justify-content: center;
-  /* width: 100%; */
-  /* grid-template-columns: auto auto auto; */
-  /* padding: 5px; */
-  grid-template-columns: repeat(auto-fit, 400px);
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.project_showcase .container {
-  gap: 20px;
-  background-color: #f1f1f1;
+.project_card {
+  background-color: var(--bg-card);
   border: 1px solid black;
-  box-shadow: #d2e0e2;
-  padding: 10px;
-  margin: 10px;
-  width: 350px;
-  height: 500px;
+  box-shadow: -1px 0px 5px 0px #1e2020;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.project_showcase .container img {
-  width: 350px;
+.project_card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.project_info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project_info p {
+  flex-grow: 1;
+  margin: 10px 0;
 }
 
 .footer {
   background-color: rgb(11, 11, 11);
   color: white;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  padding: 5px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
