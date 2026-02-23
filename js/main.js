@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const bio = document.getElementById("bio");
   const emailBtn = document.getElementById("copyEmail");
   const feedback = document.getElementById("copyFeedback");
-
   const emailAddress = "basohblaise23@gmail.com";
 
   // icons 
@@ -57,4 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     link.setAttribute("target", "_blank");
     link.setAttribute("rel", "noopener noreferrer");
   });
+
+  // super important top secret.
+  console.log("Hello visitor!. Thanks for passing by!")
 });
