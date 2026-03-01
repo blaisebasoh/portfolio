@@ -21,7 +21,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .under-construction {
@@ -32,12 +32,18 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: repeating-linear-gradient(45deg, #fbbd0a, #fbbd0a 20px, #161616 20px, #161616 40px);
+  background: repeating-linear-gradient(
+    45deg,
+    #fbbd0a,
+    #fbbd0a 20px,
+    #161616 20px,
+    #161616 40px
+  );
   /* set display: none; to disable */
 }
 
 .under-construction-text {
-  color: #F5F5F5;
+  color: #f5f5f5;
   font-weight: 800;
   font-size: 20px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
@@ -47,10 +53,12 @@ body {
   background-color: var(--bg-body);
   color: var(--main-color);
   line-height: 1.6;
-  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  transition:
+    background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
   min-height: 100vh;
   position: relative;
-  font-family: 'Courier New', 'Courier New', Courier, monospace;
+  font-family: "Courier New", "Courier New", Courier, monospace;
 }
 
 /* Theme Toggle Button & Animation */
@@ -74,7 +82,9 @@ body {
   justify-content: center;
   margin: 0 auto;
   font-size: 20px;
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color var(--transition-speed);
+  transition:
+    transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    border-color var(--transition-speed);
 }
 
 #themeToggle:hover {
@@ -145,7 +155,10 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
+  transition:
+    transform var(--transition-speed),
+    box-shadow var(--transition-speed),
+    background-color var(--transition-speed);
 }
 
 .project_card:hover {
@@ -153,7 +166,8 @@ body {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.project_card img {
+.project_card img,
+.project_card video {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -164,6 +178,11 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.project_info p {
+  height: 100px;
+  overflow: hidden;
 }
 
 .repo {

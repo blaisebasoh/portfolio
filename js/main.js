@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const feedback = document.getElementById("copyFeedback");
   const emailAddress = "basohblaise23@gmail.com";
 
-  // icons 
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
+
+  // icons
   const sunIcon = "☼";
   const moonIcon = "☽";
 
@@ -25,18 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
       themeToggle.style.transform = "rotate(180deg)";
 
       setTimeout(() => {
-      body.classList.toggle("dark-mode");
-      const isDark = body.classList.contains("dark-mode");
+        body.classList.toggle("dark-mode");
+        const isDark = body.classList.contains("dark-mode");
 
-      themeToggle.textContent = isDark ? sunIcon : moonIcon;
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-      themeToggle.style.transform = "rotate(0deg)";
+        themeToggle.textContent = isDark ? sunIcon : moonIcon;
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        themeToggle.style.transform = "rotate(0deg)";
       }, 250);
     });
   }
 
   // static bio
-  if (bio) bio.textContent = "Game Developer, Software Engineer, Artist, Renewable Energy Engineer";
+  if (bio)
+    bio.textContent =
+      "Game Developer, Software Engineer, Artist, Renewable Energy Engineer";
 
   // email copy functionality
   if (emailBtn) {
@@ -52,11 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // external links handling
-  document.querySelectorAll(".repo").forEach(link => {
+  document.querySelectorAll(".repo").forEach((link) => {
     link.setAttribute("target", "_blank");
     link.setAttribute("rel", "noopener noreferrer");
   });
 
   // super important top secret.
-  console.log("Hello visitor!. Thanks for passing by!")
+  console.log("Hello visitor!. Thanks for passing by!");
 });

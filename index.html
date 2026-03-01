@@ -1,94 +1,109 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/blaise_web_favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Blaise | Home</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/index.css" />
-  <title>Blaise | Home</title>
-</head>
+  <body>
+    <section class="under-construction">
+      <!-- i know this is depreciated on some browsers -->
+      <marquee class="under-construction-text" id="under-construction-text">
+        Under Construction...
+      </marquee>
+    </section>
 
-<body>
-  <section class="under-construction">
-    <!-- i know this is depreciated on some browsers -->
-    <marquee class="under-construction-text" id="under-construction-text">Under Construction...</marquee>
-  </section>
-
-  <section class="main-content">
-
-    <header class="content">
-      <div class="head">
-        <h2>Blaise</h2>
-        <p id="bio"></p>
-        <nav class="links">
-          <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="pages/portfolio.html">portfolio</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="pages/privacy.html">terms</a></li>
-          </ul>
-        </nav>
-        <div class="theme-toggle-container">
-          <button id="themeToggle" aria-label="Toggle dark mode">☽</button>
+    <section class="main-content">
+      <header class="content">
+        <div class="head">
+          <h2>Blaise</h2>
+          <p id="bio"></p>
+          <nav class="links">
+            <ul>
+              <li><a href="index.html">home</a></li>
+              <li><a href="pages/portfolio.html">portfolio</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="pages/privacy.html">terms</a></li>
+            </ul>
+          </nav>
+          <div class="theme-toggle-container">
+            <button id="themeToggle" aria-label="Toggle dark mode">☽</button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main class="project_showcase">
-      <article class="project_card">
-        <img src="assets/images/finished building godot.png" alt="Godot Project" loading="lazy" />
-        <div class="project_info">
-          <h4>Project Title</h4>
-          <p>Short project description goes here. Explain the goal and tools used.</p>
-          <a href="https://github.com/blaisebasoh/" class="repo">github</a>
-        </div>
-      </article>
-      <article class="project_card">
-        <img src="assets/images/finished building godot.png" alt="Godot Project" loading="lazy" />
-        <div class="project_info">
-          <h4>Project Title</h4>
-          <p>Short project description goes here. Explain the goal and tools used.</p>
-          <a href="https://github.com/blaisebasoh/" class="repo">github</a>
-        </div>
-      </article>
-      <article class="project_card">
-        <img src="assets/images/finished building godot.png" alt="Godot Project" loading="lazy" />
-        <div class="project_info">
-          <h4>Project Title</h4>
-          <p>Short project description goes here. Explain the goal and tools used.</p>
-          <a href="https://github.com/blaisebasoh/" class="repo">github</a>
-        </div>
-      </article>
-      <article class="project_card">
-        <img src="assets/images/finished building godot.png" alt="Godot Project" loading="lazy" />
-        <div class="project_info">
-          <h4>Project Title</h4>
-          <p>Short project description goes here. Explain the goal and tools used.</p>
-          <a href="https://github.com/blaisebasoh/" class="repo">github</a>
-        </div>
-      </article>
-      <article class="project_card">
-        <img src="assets/images/finished building godot.png" alt="Godot Project" loading="lazy" />
-        <div class="project_info">
-          <h4>Project Title</h4>
-          <p>Short project description goes here. Explain the goal and tools used.</p>
-          <a href="https://github.com/blaisebasoh/" class="repo">github</a>
-        </div>
-      </article>
-    </main>
+      <main class="project_showcase">
+        <article class="project_card">
+          <video class="lozad" width="320" height="240" autoplay muted loop>
+            <source src="assets/videos/algo_visualizer.webm" />
+          </video>
+          <div class="project_info">
+            <h4>Algorithm Visualizer</h4>
+            <p>
+              Algorithm visualizer built from scratch visualizing popular and
+              unpopular sorting algorithms. Current state should have bubble
+              sort, insertion sort and selection sort algorithms implented
+            </p>
+            <a
+              href="https://github.com/blaisebasoh/algorithm_visualizer_raylib"
+              class="repo"
+              >github</a
+            >
+          </div>
+        </article>
+        <article class="project_card">
+          <img
+            src="assets/images/finished building godot.png"
+            alt="Godot Project"
+            class="lozad"
+          />
+          <div class="project_info">
+            <h4>Project Title</h4>
+            <p>
+              Short project description goes here. Explain the goal and tools
+              used.
+            </p>
+            <a href="https://github.com/blaisebasoh/" class="repo">github</a>
+          </div>
+        </article>
+        <article class="project_card">
+          <img
+            src="assets/images/finished building godot.png"
+            alt="Godot Project"
+            class="lozad"
+          />
+          <div class="project_info">
+            <h4>Project Title</h4>
+            <p>
+              Short project description goes here. Explain the goal and tools
+              used.
+            </p>
+            <a href="https://github.com/blaisebasoh/" class="repo">github</a>
+          </div>
+        </article>
+      </main>
 
-    <span id="copyFeedback" style="display: none">Copied!</span>
+      <span id="copyFeedback" style="display: none">Copied!</span>
 
-    <footer class="footer">
-      <div class="contact">
-        <a class="repo" href="https://github.com/blaisebasoh/">github</a>
-        <button id="copyEmail">email</button>
-      </div>
-      <p>&copy; 2026 Basoh Blaise. All rights reserved</p>
-    </footer>
-
-  </section>
-  <script src="js/main.js"></script>
-</body>
-
+      <footer class="footer">
+        <div class="contact">
+          <a class="repo" href="https://github.com/blaisebasoh/">github</a>
+          <button id="copyEmail">email</button>
+        </div>
+        <p>&copy; 2026 Basoh Blaise. All rights reserved</p>
+      </footer>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
 </html>
