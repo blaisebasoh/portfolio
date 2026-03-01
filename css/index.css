@@ -130,7 +130,7 @@ body {
 
 .links a {
   text-decoration: none;
-  color: var(--main-color);
+  color: #d66045;
   font-weight: bold;
   font-size: 18px;
   transition: color var(--transition-speed);
@@ -145,7 +145,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
-  padding: 40px 20px;
+  padding: 0px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
